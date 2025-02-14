@@ -46,11 +46,10 @@ int main() {
 
     densidadepopulacional1 = (float) populacao1 / area1;
     pibpercapita1 = pib1 / (float) populacao1;
-    superpoder1 = (double) ( (float) populacao1 + area1 + pib1 + (float) turisticos1); // É a soma das informações como: População, área, Pib e Pontos turisticos
+    superpoder1 = (float) populacao1 + area1 + pib1 + (float) turisticos1; // É a soma das informações como: População, área, Pib e Pontos turisticos
 
+    printf(" *** Dados da primeira carta *** \n");  
     printf("A letra que representa o estado de São Paulo é: %c\n", estado1);
-
-    printf(" *** Dados da primeira carta *** \n");   
     printf("O código que representa a carta é: %s\n", codigodacidade1);
     printf("O nome da cidade é: %s\n", cidade1);
     printf("A quantidade de população é: %d\n", populacao1);
