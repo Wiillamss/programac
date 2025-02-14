@@ -22,6 +22,7 @@ int main() {
     int turisticos1, turisticos2, turisticos3, turisticos4; // Número de pontos turísticos
     float densidadepopulacional1, densidadepopulacional2, densidadepopulacional3, densidadepopulacional4; // População dividida pela área da cidade
     float pibpercapita1, pibpercapita2, pibpercapita3, pibpercapita4; // PIB total dividido pela população
+    float superpoder1, superpoder2, superpoder3, superpoder4; // Super poder é a soma de todas as atribuição da carta
 
     printf(" *** Digite os dados da primeira cidade *** \n");
 
@@ -44,7 +45,8 @@ int main() {
     scanf("%d", &turisticos1);
 
     densidadepopulacional1 = (float) populacao1 / area1;
-    pibpercapita1 = pib1 / populacao1;
+    pibpercapita1 = pib1 / (float) populacao1;
+    superpoder1 = (double) ( (float) populacao1 + area1 + pib1 + (float) turisticos1); // É a soma das informações como: População, área, Pib e Pontos turisticos
 
     printf("A letra que representa o estado de São Paulo é: %c\n", estado1);
 
@@ -53,10 +55,11 @@ int main() {
     printf("O nome da cidade é: %s\n", cidade1);
     printf("A quantidade de população é: %d\n", populacao1);
     printf("A área total é: %.2f Km²\n", area1);
-    printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", pib1);
+    printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", (double) pib1);
     printf("A quantidade de pontos turísticos é: %d\n", turisticos1);
     printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional1);
-    printf("O PIB per capita por pessoa é: %d reais\n", (int) pibpercapita1);
+    printf("O PIB per capita por pessoa é: %.2f reais\n", (float) pibpercapita1);
+    printf("O poder da carta é de: %.2f\n", (float) superpoder1);
 
 return 0;
 }
