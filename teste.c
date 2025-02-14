@@ -56,9 +56,9 @@ int main() {
     printf("A área total é: %.2f Km²\n", area1);
     printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", (double) pib1);
     printf("A quantidade de pontos turísticos é: %d\n", turisticos1);
-    printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional1);
+    printf("A densidade populacional é: %.2f pessoas por km²\n", (float) densidadepopulacional1);
     printf("O PIB per capita por pessoa é: %.2f reais\n", (float) pibpercapita1);
-    printf("O poder da carta é de: %.2f\n", (float) superpoder1);
+    printf("O poder da carta é de: %.2f\n", (double) superpoder1);
 
 return 0;
 }
