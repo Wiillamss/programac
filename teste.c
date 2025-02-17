@@ -69,7 +69,7 @@ int main() {
     scanf("%d", &turisticos2);
 
     densidadepopulacional2 = populacao2 / area2;
-    pibpercapita1 = pib2 / populacao2;
+    pibpercapita2 = pib2 / populacao2;
     superpoder2 = populacao2 + area2 + pib2 + turisticos2; // É a soma das informações como: População, área, Pib e Pontos turisticos
 
     printf(" *** Dados da primeira carta *** \n");  
@@ -96,7 +96,6 @@ int main() {
     printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional2);
     printf("O PIB per capita por pessoa é: %.2f reais\n", pibpercapita2);
     printf("O poder da carta é de: %.2f pontos\n", superpoder2);
-
 
     printf("A comparação entre as Cartas se A01 menor ou igual A04: %d\n", superpoder1 <= superpoder2);
     // 1 para sim e 0 para não
