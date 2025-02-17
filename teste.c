@@ -48,6 +48,30 @@ int main() {
     pibpercapita1 = pib1 / populacao1;
     superpoder1 = populacao1 + area1 + pib1 + turisticos1; // É a soma das informações como: População, área, Pib e Pontos turisticos
 
+    printf(" *** Digite os dados da segunda cidade *** \n");
+
+    printf("Digite o código da cidade: \n");
+    scanf("%s", &codigodacidade2);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", &cidade2);
+
+    printf("Digite a quantidade total da população: \n");
+    scanf("%d", &populacao2);
+
+    printf("Digite a area total da cidade: \n");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &pib2);
+
+    printf("Digite a quantidade de pontos turísticos: \n");
+    scanf("%d", &turisticos2);
+
+    densidadepopulacional2 = populacao2 / area2;
+    pibpercapita1 = pib2 / populacao2;
+    superpoder2 = populacao2 + area2 + pib2 + turisticos2; // É a soma das informações como: População, área, Pib e Pontos turisticos
+
     printf(" *** Dados da primeira carta *** \n");  
     printf("A letra que representa o estado de São Paulo é: %c\n", estado1);
     printf("O código que representa a carta é: %s\n", codigodacidade1);
@@ -60,5 +84,21 @@ int main() {
     printf("O PIB per capita por pessoa é: %.2f reais\n", pibpercapita1);
     printf("O poder da carta é de: %.2f pontos\n", superpoder1);
 
+
+    printf(" *** Dados da primeira carta *** \n");  
+    printf("A letra que representa o estado de São Paulo é: %c\n", estado1);
+    printf("O código que representa a carta é: %s\n", codigodacidade2);
+    printf("O nome da cidade é: %s\n", cidade2);
+    printf("A quantidade de população é de: %d pessoas\n", populacao2);
+    printf("A área total é: %.2f Km²\n", area2);
+    printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", pib2);
+    printf("A quantidade de pontos turísticos é: %d\n", turisticos2);
+    printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional2);
+    printf("O PIB per capita por pessoa é: %.2f reais\n", pibpercapita2);
+    printf("O poder da carta é de: %.2f pontos\n", superpoder2);
+
+
+    printf("A comparação entre as Cartas se A01 menor ou igual A04: %d\n", superpoder1 <= superpoder2);
+    // 1 para sim e 0 para não
 return 0;
 }
