@@ -13,9 +13,10 @@ int main() {
     de A à H, e cada estado vai ter 4 cidades, acompanhando a letra do estado e um número,
     exemplo: A01, A02, B01, B02. */
 
-    // Cadastro das Cartas do Primeiro estado
+    /*Cadastro das variaveis represetam de 1 a 4, exemplo: Estado1 = Variaveis de 1 à 2 e
+    Estado2 = Variaveis de 3 à 4*/
 
-    char estado1 = 'A'; // Letra que representa o estado
+    char estado1, estado2; // Letra que representa o estado
     char codigodacidade1[5], codigodacidade2[5], codigodacidade3[5], codigodacidade4[5]; // Código que vai representar a cidade
     char cidade1[10], cidade2[10], cidade3[10], cidade4[10]; // Cidade do Estado
     int populacao1, populacao2, populacao3, populacao4; // Quantidade total de pessoas
@@ -26,9 +27,12 @@ int main() {
     float pibpercapita1, pibpercapita2, pibpercapita3, pibpercapita4; // PIB total dividido pela população
     float superpoder1, superpoder2, superpoder3, superpoder4; // Poder de cada carta = é a soma de variaveis
 
-    // Entrada de Dados para a primeira cidade
+    // Entrada de Dados para a primeira carta
 
-    printf(" *** Digite os dados da primeira cidade *** \n");
+    printf(" *** Digite os dados da primeira carta *** \n");
+
+    printf("Digite a letra que representa o estado: \n");
+    scanf(" %c", &estado1);
 
     printf("Digite o código da cidade: \n");
     scanf("%s", &codigodacidade1);
@@ -52,35 +56,12 @@ int main() {
     pibpercapita1 = pib1 / populacao1;
     superpoder1 = populacao1 + area1 + pib1 + turisticos1;
 
-    // Entrada de Dados da segunda cidade
+    // Entrada de Dados da segunda carta
 
-    printf(" *** Digite os dados da segunda cidade *** \n");
+    printf(" *** Digite os dados da segunda carta *** \n");
 
-    printf("Digite o código da cidade: \n");
-    scanf("%s", &codigodacidade2);
-
-    printf("Digite o nome da cidade: \n");
-    scanf("%s", &cidade2);
-
-    printf("Digite a quantidade total da população: \n");
-    scanf("%d", &populacao2);
-
-    printf("Digite a area total da cidade: \n");
-    scanf("%f", &area2);
-
-    printf("Digite o PIB da cidade: \n");
-    scanf("%f", &pib2);
-
-    printf("Digite a quantidade de pontos turísticos: \n");
-    scanf("%d", &turisticos2);
-
-    densidadepopulacional2 = populacao2 / area2;
-    pibpercapita2 = pib2 / populacao2;
-    superpoder2 = populacao2 + area2 + pib2 + turisticos2;
-
-// Entrada de Dados da terceira cidade
-
-    printf(" *** Digite os dados da terceira cidade *** \n");
+    printf("Digite a letra que representa o estado: \n");
+    scanf(" %c", &estado2);
 
     printf("Digite o código da cidade: \n");
     scanf("%s", &codigodacidade3);
@@ -104,52 +85,39 @@ int main() {
     pibpercapita3 = pib3 / populacao3;
     superpoder3 = populacao3 + area3 + pib3 + turisticos3;
 
-// Entrada de Dados da quarta cidade
-
-    printf(" *** Digite os dados da quarta cidade *** \n");
-
-    printf("Digite o código da cidade: \n");
-    scanf("%s", &codigodacidade4);
-
-    printf("Digite o nome da cidade: \n");
-    scanf("%s", &cidade4);
-
-    printf("Digite a quantidade total da população: \n");
-    scanf("%d", &populacao4);
-
-    printf("Digite a area total da cidade: \n");
-    scanf("%f", &area4);
-
-    printf("Digite o PIB da cidade: \n");
-    scanf("%f", &pib4);
-
-    printf("Digite a quantidade de pontos turísticos: \n");
-    scanf("%d", &turisticos4);
-
-    densidadepopulacional4 = populacao4 / area4;
-    pibpercapita4 = pib4 / populacao4;
-    superpoder4 = populacao4 + area4 + pib4 + turisticos4;
-
-    // Cadastro das Cartas do Segundo Estado
-    
-    char estado2 = 'B'; // Letra que representa o estado
-    char codigodacidade5[5], codigodacidade6[5], codigodacidade7[5], codigodacidade8[5]; // Código que vai representar a cidade
-    char cidade5[10], cidade6[10], cidade7[10], cidade8[10]; // Cidade do Estado
-    int populacao5, populacao6, populacao7, populacao8; // Quantidade total de pessoas
-    float area5, area6, area7, area8; // Área total em km² da cidade
-    float pib5, pib6, pib7, pib8; // PIB da cidade
-    int turisticos5, turisticos6, turisticos7, turisticos8; // Número de pontos turísticos
-    float densidadepopulacional5, densidadepopulacional6, densidadepopulacional7, densidadepopulacional8; // População dividida pela área da cidade
-    float pibpercapita5, pibpercapita6, pibpercapita7, pibpercapita8; // PIB total dividido pela população
-    float superpoder5, superpoder6, superpoder7, superpoder8; // Poder da carta = é a soma de variaveis
-
-
 // Comandos de exibição das Cartas
+    //Primeira Carta
+
+    printf(" *** Dados da primeira carta *** \n");
+    printf("A letra que representa o estado é: %c\n", estado1);   
+    printf("O código que representa a carta é: %s\n", codigodacidade1);
+    printf("O nome da cidade é: %s\n", cidade1);
+    printf("A quantidade de população é: %d pessoas\n", populacao1);
+    printf("A área total é: %.2f Km²\n", area1);
+    printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", pib1);
+    printf("A quantidade de pontos turísticos é: %d\n", turisticos1);
+    printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional1);
+    printf("O PIB per capita por pessoa é: %.2f reais\n", pibpercapita1);
+    printf("O poder da carta é de: %.2f pontos\n", superpoder1);
+
+    // Segunda Carta
+
+    printf(" *** Dados da segunda carta *** \n");
+    printf("A letra que representa o estado é: %c\n", estado2);
+    printf("O código que representa a carta é: %s\n", codigodacidade3);
+    printf("O nome da cidade é: %s\n", cidade3);
+    printf("A quantidade de população é: %d pessoas\n", populacao3);
+    printf("A área total é: %.2f Km²\n", area3);
+    printf("O PIB que representa a cidade é: %.2f Milhões de reais\n", pib3);
+    printf("A quantidade de pontos turísticos é: %d\n", turisticos3);
+    printf("A densidade populacional é: %.2f pessoas por km²\n", densidadepopulacional3);
+    printf("O PIB per capita por pessoa é: %.2f reais\n", pibpercapita3);
+    printf("O poder da carta é de: %.2f pontos\n", superpoder3);
    
 
     // Comparação entre as cartas é: 1 para sim e 0 para não
 
-    printf("A comparação entre as Cartas se A01 é menor ou igual A04: %d\n", superpoder1 <= superpoder2);
+    printf("A comparação entre as Cartas se A01 é menor ou igual B01: %d\n", superpoder1 == superpoder3);
 
 return 0;
 }
