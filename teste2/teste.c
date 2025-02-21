@@ -71,8 +71,8 @@ int main() {
     printf("Pontos turísticos: %d\n", turisticos1);
     printf("Densidade populacional: %.2f de habitantes por km²\n", densidade_populacional1);
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita1);
-    printf("Inverso de Densidade Populacional: %f habitantes por km²\n", inverso_densidade1);
-    printf("Super Poder: %.2lf\n", super_poder1);
+    printf("Inverso de Densidade Populacional: %.4f habitantes por km²\n", inverso_densidade1);
+    printf("Super Poder: %.2f\n", super_poder1);
 
 /* Entrada de Dados da segunda carta em Scanf
     Solicitando ao usuario a cadastrar as informações das cartas */
@@ -119,8 +119,8 @@ int main() {
     printf("Pontos turísticos: %d\n", turisticos3);
     printf("Densidade populacional: %.2f de habitantes por km²\n", densidade_populacional3);
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita3);
-    printf("Inverso de Densidade Populacional: %f habitantes por km²\n", inverso_densidade3);
-    printf("Super Poder: %.2lf\n", super_poder3);
+    printf("Inverso de Densidade Populacional: %.4f habitantes por km²\n", inverso_densidade3);
+    printf("Super Poder: %.2f\n", super_poder3);
     
 return 0;
 }
