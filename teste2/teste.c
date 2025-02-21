@@ -25,7 +25,9 @@ int main() {
     double inverso_densidade1, inverso_densidade2, inverso_densidade3, inverso_densidade4; // Inverso da densidade populacional = 1.0 / Densidade Populacional
     double super_poder1, super_poder2, super_poder3, super_poder4; // É a soma das variaveis = População + Área + PIB + Pontos Turisticos + PIB per Capita + Inverso da Densidade Populacional
     
-    // Entrada de Dados para a primeira carta em Scanf
+    /* Entrada de Dados da primeira carta em Scanf
+    Solicitando ao usuario a cadastrar as informações das cartas */
+
 
     printf(" *** Digite os dados da primeira carta *** \n");
 
@@ -56,7 +58,7 @@ int main() {
     super_poder1 = populacao1 + area1 + pib1 + turisticos1 + pib_per_capita1 + inverso_densidade1; // Atribuição a variavel super_poder1
 
 // Comandos de exibição das Cartas usando Printf
-    
+    // Imprimindo as informações 
     //Primeira Carta
 
     printf("Carta 1: \n");
@@ -70,9 +72,10 @@ int main() {
     printf("Densidade populacional: %.2f de habitantes por km²\n", densidade_populacional1);
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita1);
     printf("Inverso de Densidade Populacional: %f habitantes por km²\n", inverso_densidade1);
-    printf("Super Poder: %.2f\n", super_poder1);
+    printf("Super Poder: %.2lf\n", super_poder1);
 
-    // Entrada de Dados da segunda carta em Scanf
+/* Entrada de Dados da segunda carta em Scanf
+    Solicitando ao usuario a cadastrar as informações das cartas */
 
     printf(" *** Digite os dados da segunda carta *** \n");
 
@@ -103,7 +106,7 @@ int main() {
     super_poder3 = populacao1 + area3 + pib3 + turisticos3 + pib_per_capita3 + inverso_densidade3; // Atribuição a variavel super_poder3
 
 // Comandos de exibição das Cartas
-    
+    // Imprimindo as informações
     // Segunda Carta
 
     printf("Carta 2: \n");
@@ -117,7 +120,7 @@ int main() {
     printf("Densidade populacional: %.2f de habitantes por km²\n", densidade_populacional3);
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita3);
     printf("Inverso de Densidade Populacional: %f habitantes por km²\n", inverso_densidade3);
-    printf("Super Poder: %.2f\n", super_poder3);
+    printf("Super Poder: %.2lf\n", super_poder3);
     
 return 0;
 }
