@@ -121,6 +121,19 @@ int main() {
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita3);
     printf("Inverso de Densidade Populacional: %.4f habitantes por km²\n", inverso_densidade3);
     printf("Super Poder: %.2f\n", super_poder3);
+
+    // Realizando as comparações das cartas com base em cada informação
+
+    int ganhador_populacao = (populacao1 > populacao3) + (populacao1 < populacao3) * 2;
+    int ganhador_area = (area1 > area3) + (area1 < area3) * 2;
+    int ganhador_pib = (pib1 > pib3) + (pib1 < pib3) * 2;
+    int ganhador_turisticos = (turisticos1 > turisticos3) + (turisticos1 < turisticos3) * 2;
+    int ganhador_densidadepopulacional = (densidade_populacional1 > densidade_populacional3) + (densidade_populacional1 < densidade_populacional3) * 2;
+    int ganhador_pib_per_capita = (pib_per_capita1 > pib_per_capita3) + (pib_per_capita1 < pib_per_capita3) * 2;
+    int ganhador_inverso_densidade = (inverso_densidade1 > inverso_densidade3) + (inverso_densidade1 < inverso_densidade3) * 2;
+    int ganhador_super_poder = (super_poder1 > super_poder3) + (super_poder1 < super_poder3) * 2;
+
+    // Exibindo o resultado na tela 
     
 return 0;
 }
