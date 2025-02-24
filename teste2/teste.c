@@ -15,7 +15,7 @@ int main() {
 
     char estado1, estado2; // Letra que representa o estado
     char codigo_da_cidade1[5], codigo_da_cidade2[5], codigo_da_cidade3[5], codigo_da_cidade4[5]; // Código que vai representar a cidade
-    char cidade1[10], cidade2[10], cidade3[10], cidade4[10]; // Cidade do Estado
+    char cidade1[20], cidade2[20], cidade3[20], cidade4[20]; // Cidade do Estado
     unsigned long int populacao1, populacao2, populacao3, populacao4; // Quantidade total de pessoas
     float area1, area2, area3, area4; // Área total em km² da cidade
     double pib1, pib2, pib3, pib4; // PIB da cidade

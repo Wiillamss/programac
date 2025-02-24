@@ -10,7 +10,7 @@ int main (){
 
 // fgets inclui o '\n' na string, então podemos removê-lo se necessário
  
-    nome[strcspn(nome, "\n")] = 0;
+    //nome[strcspn(nome, "\n")] = 0;
  
 
     printf("Nome completo digitado: %s\n", nome);
