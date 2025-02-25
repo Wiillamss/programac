@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
+// Desafio Super Trunfo
 // Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
+// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades e suas atribuições
 // Prática Willams da Silva Gomes
 
 int main() {
@@ -134,30 +134,26 @@ int main() {
 
     // Exibindo o resultado na tela 
 
-    printf(" *** A comparação entre as Cartas para saber se a carta 1 é a ganhadora (1 para sim e 0 para não) ***\n");
-    printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
-    printf("Área: Carta 1 venceu (%d)\n", area1 >= area3);
-    printf("PIB: Carta 1 venceu (%d)\n", pib1 >= pib3);
-    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", turisticos1 >= turisticos3);
-    printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade_populacional1 >= densidade_populacional3);
-    printf("Inverso de Densidade Populacional: Carta 1 venceu (%d)\n", inverso_densidade1 <= inverso_densidade3);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_per_capita1 >= pib_per_capita3);
-    printf("Super Poder: Carta 1 venceu (%d)\n", super_poder1 >= super_poder3);
+    printf(" *** A comparação entre as Cartas 1 e 2 para saber quem foi a ganhadora (1 para sim e 0 para não) ***\n");
 
-    printf("\n"); // Deixando um espaço entre as informações
+    printf("\n");
 
-    printf(" *** A comparação entre as Cartas para saber se a carta 2 é a ganhadora (1 para sim e 0 para não) ***\n");
-    printf("População: Carta 2 venceu (%d)\n", populacao1 >= populacao3);
-    printf("Área: Carta 2 venceu (%d)\n", area1 >= area3);
-    printf("PIB: Carta 2 venceu (%d)\n", pib1 >= pib3);
-    printf("Pontos Turisticos: Carta 2 venceu (%d)\n", turisticos1 >= turisticos3);
-    printf("População: Carta 2 venceu (%d)\n", populacao1 >= populacao3);
-    printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade_populacional1 >= densidade_populacional3);
-    printf("Inverso de Densidade Populacional: Carta 2 venceu (%d)\n", inverso_densidade1 <= inverso_densidade3);
-    printf("PIB per Capita: Carta 2 venceu (%d)\n", pib_per_capita1 >= pib_per_capita3);
-    printf("Super Poder: Carta 2 venceu (%d)\n", super_poder1 >= super_poder3);
-    
-    
+    printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao3);
+    printf("População: Carta 2 venceu (%d)\n", populacao1 < populacao3);
+    printf("Área: Carta 1 venceu (%d)\n", area1 > area3);
+    printf("Área: Carta 2 venceu (%d)\n", area1 < area3);
+    printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib3);
+    printf("PIB: Carta 2 venceu (%d)\n", pib1 < pib3);
+    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", turisticos1 > turisticos3);
+    printf("Pontos Turisticos: Carta 2 venceu (%d)\n", turisticos1 < turisticos3);
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade_populacional1 > densidade_populacional3);
+    printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade_populacional1 < densidade_populacional3);
+    printf("Inverso de Densidade Populacional: Carta 1 venceu (%d)\n", inverso_densidade1 < inverso_densidade3);
+    printf("Inverso de Densidade Populacional: Carta 2 venceu (%d)\n", inverso_densidade1 > inverso_densidade3);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_per_capita1 > pib_per_capita3);
+    printf("PIB per Capita: Carta 2 venceu (%d)\n", pib_per_capita1 < pib_per_capita3);
+    printf("Super Poder: Carta 1 venceu (%d)\n", super_poder1 > super_poder3);
+    printf("Super Poder: Carta 2 venceu (%d)\n", super_poder1 < super_poder3);
+       
 return 0;
 }
