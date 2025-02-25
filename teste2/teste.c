@@ -57,6 +57,8 @@ int main() {
     inverso_densidade1 = 1.0 / densidade_populacional1; // Atribuição a variavel inverso_densidade1
     super_poder1 = populacao1 + area1 + pib1 + turisticos1 + pib_per_capita1 + inverso_densidade1; // Atribuição a variavel super_poder1
 
+    printf("\n"); // Deixando um espaço entre as informações
+
 // Comandos de exibição das Cartas usando Printf
     // Imprimindo as informações 
     //Primeira Carta
@@ -73,6 +75,8 @@ int main() {
     printf("PIB per capita por pessoa: %.2f reais\n", pib_per_capita1);
     printf("Inverso de Densidade Populacional: %.4f habitantes por km²\n", inverso_densidade1);
     printf("Super Poder: %.2f\n", super_poder1);
+
+    printf("\n"); // Deixando um espaço entre as informações
 
 /* Entrada de Dados da segunda carta em Scanf
     Solicitando ao usuario a cadastrar as informações das cartas */
@@ -105,6 +109,8 @@ int main() {
     inverso_densidade3 = 1.0 / densidade_populacional3; // Atribuição a variavel inverso_densidade3
     super_poder3 = populacao1 + area3 + pib3 + turisticos3 + pib_per_capita3 + inverso_densidade3; // Atribuição a variavel super_poder3
 
+    printf("\n"); // Deixando um espaço entre as informações
+    
 // Comandos de exibição das Cartas
     // Imprimindo as informações
     // Segunda Carta
@@ -122,18 +128,23 @@ int main() {
     printf("Inverso de Densidade Populacional: %.4f habitantes por km²\n", inverso_densidade3);
     printf("Super Poder: %.2f\n", super_poder3);
 
+    printf("\n"); // Deixando um espaço entre as informações
+
     // Realizando as comparações das cartas com base em cada informação
 
-    int ganhador_populacao = (populacao1 > populacao3) + (populacao1 < populacao3) * 2;
-    int ganhador_area = (area1 > area3) + (area1 < area3) * 2;
-    int ganhador_pib = (pib1 > pib3) + (pib1 < pib3) * 2;
-    int ganhador_turisticos = (turisticos1 > turisticos3) + (turisticos1 < turisticos3) * 2;
-    int ganhador_densidadepopulacional = (densidade_populacional1 > densidade_populacional3) + (densidade_populacional1 < densidade_populacional3) * 2;
-    int ganhador_pib_per_capita = (pib_per_capita1 > pib_per_capita3) + (pib_per_capita1 < pib_per_capita3) * 2;
-    int ganhador_inverso_densidade = (inverso_densidade1 > inverso_densidade3) + (inverso_densidade1 < inverso_densidade3) * 2;
-    int ganhador_super_poder = (super_poder1 > super_poder3) + (super_poder1 < super_poder3) * 2;
-
     // Exibindo o resultado na tela 
+
+    printf(" *** A comparação entre as Cartas para saber qual é a carta vencedora ***\n");
+    printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
+    printf("Área: Carta 1 venceu (%d)\n", area1 >= area3);
+    printf("PIB: Carta 1 venceu (%d)\n", pib1 >= pib3);
+    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", turisticos1 >= turisticos3);
+    printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
+    printf("Densidade Populacional: Carta 1 venceu(%d)\n", densidade_populacional1 >= densidade_populacional3);
+    printf("Inverso de Densidade Populacional: Carta 1 venceu(%d)\n", inverso_densidade1 <= inverso_densidade3);
+    printf("PIB per Capita: Carta 1 venceu(%d)\n", pib_per_capita1 >= pib_per_capita3);
+    printf("Super Poder: Carta 1 venceu(%d)\n", super_poder1 >= super_poder3);
+    
     
 return 0;
 }
