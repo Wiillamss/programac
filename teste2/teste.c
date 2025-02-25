@@ -134,7 +134,7 @@ int main() {
 
     // Exibindo o resultado na tela 
 
-    printf(" *** A comparação entre as Cartas 1 e 2 para saber quem foi a ganhadora (1 para sim e 0 para não) ***\n");
+    printf(" *** Realizando a comparação entre as Cartas 1 e 2 para saber quem foi a ganhadora (1 para sim e 0 para não) ***\n");
 
     printf("\n");
 
