@@ -55,7 +55,7 @@ int main() {
     densidade_populacional1 = (float) populacao1 / area1; // Atribuição a variavel densidade_populacional1
     pib_per_capita1 = (float) pib1 / populacao1; // Atribuição a variavel pib_per_capita1
     inverso_densidade1 = 1.0 / densidade_populacional1; // Atribuição a variavel inverso_densidade1
-    super_poder1 = populacao1 + area1 + pib1 + turisticos1 + pib_per_capita1 + inverso_densidade1; // Atribuição a variavel super_poder1
+    super_poder1 = (float) populacao1 + area1 + pib1 + turisticos1 + pib_per_capita1 + inverso_densidade1; // Atribuição a variavel super_poder1
 
     printf("\n"); // Deixando um espaço entre as informações
 
@@ -107,10 +107,10 @@ int main() {
     densidade_populacional3 = (float) populacao3 / area3; // Atribuição a variavel densidade_populacional3
     pib_per_capita3 = (float) pib3 / populacao3; // Atribuição a variavel pib_per_capita3
     inverso_densidade3 = 1.0 / densidade_populacional3; // Atribuição a variavel inverso_densidade3
-    super_poder3 = populacao1 + area3 + pib3 + turisticos3 + pib_per_capita3 + inverso_densidade3; // Atribuição a variavel super_poder3
+    super_poder3 = (float) populacao1 + area3 + pib3 + turisticos3 + pib_per_capita3 + inverso_densidade3; // Atribuição a variavel super_poder3
 
     printf("\n"); // Deixando um espaço entre as informações
-    
+
 // Comandos de exibição das Cartas
     // Imprimindo as informações
     // Segunda Carta
@@ -134,16 +134,29 @@ int main() {
 
     // Exibindo o resultado na tela 
 
-    printf(" *** A comparação entre as Cartas para saber qual é a carta vencedora ***\n");
+    printf(" *** A comparação entre as Cartas para saber se a carta 1 é a ganhadora (1 para sim e 0 para não) ***\n");
     printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
     printf("Área: Carta 1 venceu (%d)\n", area1 >= area3);
     printf("PIB: Carta 1 venceu (%d)\n", pib1 >= pib3);
     printf("Pontos Turisticos: Carta 1 venceu (%d)\n", turisticos1 >= turisticos3);
     printf("População: Carta 1 venceu (%d)\n", populacao1 >= populacao3);
-    printf("Densidade Populacional: Carta 1 venceu(%d)\n", densidade_populacional1 >= densidade_populacional3);
-    printf("Inverso de Densidade Populacional: Carta 1 venceu(%d)\n", inverso_densidade1 <= inverso_densidade3);
-    printf("PIB per Capita: Carta 1 venceu(%d)\n", pib_per_capita1 >= pib_per_capita3);
-    printf("Super Poder: Carta 1 venceu(%d)\n", super_poder1 >= super_poder3);
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade_populacional1 >= densidade_populacional3);
+    printf("Inverso de Densidade Populacional: Carta 1 venceu (%d)\n", inverso_densidade1 <= inverso_densidade3);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_per_capita1 >= pib_per_capita3);
+    printf("Super Poder: Carta 1 venceu (%d)\n", super_poder1 >= super_poder3);
+
+    printf("\n"); // Deixando um espaço entre as informações
+
+    printf(" *** A comparação entre as Cartas para saber se a carta 2 é a ganhadora (1 para sim e 0 para não) ***\n");
+    printf("População: Carta 2 venceu (%d)\n", populacao1 >= populacao3);
+    printf("Área: Carta 2 venceu (%d)\n", area1 >= area3);
+    printf("PIB: Carta 2 venceu (%d)\n", pib1 >= pib3);
+    printf("Pontos Turisticos: Carta 2 venceu (%d)\n", turisticos1 >= turisticos3);
+    printf("População: Carta 2 venceu (%d)\n", populacao1 >= populacao3);
+    printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade_populacional1 >= densidade_populacional3);
+    printf("Inverso de Densidade Populacional: Carta 2 venceu (%d)\n", inverso_densidade1 <= inverso_densidade3);
+    printf("PIB per Capita: Carta 2 venceu (%d)\n", pib_per_capita1 >= pib_per_capita3);
+    printf("Super Poder: Carta 2 venceu (%d)\n", super_poder1 >= super_poder3);
     
     
 return 0;
