@@ -8,9 +8,9 @@ int main (){
     int rainha = 0;
 
     // Realizando a movimentação da Torre
-    printf("Digite um número de 1 à 8, representando a quantidade de casas que a Torre vai mover: ");
+    printf("Digite um número de 1 à 8, representando a quantidade de casas que a Torre vai percorrer: ");
     scanf("%d", &mov_Torre);
-    printf("Digite a direção que a torre vai realizar, entre Cima ou direita:\n");
+    printf("Digite a direção que a torre vai realizar: Move-se em linha reta horizontalmente ou verticalmente: Cima ou Direita\n");
     scanf(" %s", direcao_Torre);
     printf("\n");
 
@@ -22,9 +22,9 @@ int main (){
     printf("\n");
 
     // Realizando a movimentação do Bispo
-    printf("Digite um número de 1 à 8, representando a quantidade de casas que o Bispo vai mover: ");
+    printf("Digite um número de 1 à 5, representando a quantidade de casas que o Bispo vai percorrer: ");
     scanf("%d", &mov_Bispo);
-    printf("Digite a direção que o Bispo vai realizar na Diagonal, (esquerda ou direita) + (Cima ou Baixo):\n");
+    printf("Digite a direção que o Bispo vai realizar: São cinco casas na diagonal para cima e à direita: Ex. (Cima,Direita)-(Baixo,Esquerda):\n");
     scanf(" %[^\n]", direcao_Bispo);
     printf("\n");
 
@@ -39,7 +39,7 @@ int main (){
     // Realizando a movimentação da Rainha
     printf("Digite um número de 1 à 8, representando a quantidade de casas que a Rainha vai mover: ");
     scanf("%d", &mov_Rainha);
-    printf("Digite a direção que o Rainha vai realizar, exemplo:(esquerda ou direita)-(Cima ou Baixo):\n");
+    printf("Digite a direção que o Rainha vai realizar: Ela se move em todas direções: ex.:(esquerda ou direita)-(Cima ou Baixo):\n");
     scanf(" %[^\n]", direcao_Rainha);
     printf("\n");
 
