@@ -1,29 +1,60 @@
-# include <stdio.h>
+#include <stdio.h>
 
-
-    void movimentoTorre (int casas) {
-        if (casas > 1) {
-
-            movimentoTorre (casas - 1);
-            
-    
-        }
-        char direcao_Torre[20];
-        printf("Digite a direção de movimentação da Torre (Cima ou Direita)\n");
-        scanf(" %s", direcao_Torre);
-        printf("%d para %s \n", casas, direcao_Torre);
-        
+// Realizando a movimentação da Torre
+void movimentoTorre(int casas1)
+{
+    if (casas1 > 0)
+    {
+        movimentoTorre(casas1 - 1);
+        printf("%d-Direita\n", casas1);
     }
+}
+// Realizando o movimento Rainha
+void movimentoRainha(int casas2)
+{
+    if (casas2 > 0)
+    {
+        movimentoRainha(casas2 - 1);
+        printf("%d-Esquerda\n", casas2);
+    }
+}
 
-    int main (){
-        
-        int quantCasas_Torre;
+// Realizando o movimento Bispo
+void movimentoBispo(int casas3)
+{
+    if (casas3 > 0)
+    {
+        movimentoBispo(casas3 - 1);
+        printf("%d-Direita,Cima\n", casas3);
+    }
+}
 
-        printf("Digite um número de 1 à 8, representando a quantidade de casas que a Torre vai percorrer: ");
-        scanf("%d", &quantCasas_Torre);
-        
-        printf("*** Realizando o movimento da Torre\n");
-        movimentoTorre(quantCasas_Torre);
+int main()
+{
+    // Realizando o movimento da Torre, Bispo, Rainha com o uso de Recursividade
+    printf("*** Realizando o movimento da Torre ***\n");
+    movimentoTorre(5);
+    printf("\n");
 
-        return 0;
+    printf("*** Realizando o movimento da Rainha ***\n");
+    movimentoRainha(8);
+    printf("\n");
+
+    printf("*** Realizando o movimento do Bispo ***\n");
+    movimentoBispo(5);
+    printf("\n");
+
+    // Realizando o movimento do Cavalo com loops com atualizações complexas, com uso de loops Aninhados e multiplas variáveis!
+
+    printf("*** Realizando o movimento do Cavalo ***\n");
+    for (int virar_Direcao = 3; virar_Direcao == 3; virar_Direcao--)
+    {
+         for (int casas_Cavalo = 1; casas_Cavalo < 3; casas_Cavalo++)
+         {
+            printf("%d - Cima\n", casas_Cavalo);
+
+         }
+         printf("%d - Direita\n", virar_Direcao);
+        }
+
     }
