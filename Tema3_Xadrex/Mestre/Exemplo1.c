@@ -18,7 +18,7 @@ int main()
         printf("\n");
         //------------------------------------------------------------------------
         // exemplo de loops com atualizações complexas!
-        for (int c = 0; c < 100; c += (c % 2 == 0) ? 1 : 2)
+        for (int c = 0; c < 100; c += (c % 2 == 0) ? 5 : 7)
         {
                 printf("%d \n", c);
         }
