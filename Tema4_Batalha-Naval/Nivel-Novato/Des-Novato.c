@@ -81,6 +81,14 @@ int main() {
 
     // Atribui o navio ao tabuleiro (valor 3)
     tabuleiro[linha_navio][coluna_navio] = 3; // Posiciona o navio no tabuleiro
+    /////////////////////////////////////////////////////////////////////////////
+    int linha_navio2 = 5;
+    int coluna_navio2 = 4;
+    tabuleiro[linha_navio2][coluna_navio2] = 3;
+
+    int linha_navio3 = 5;
+    int coluna_navio3 = 5;
+    tabuleiro[linha_navio3][coluna_navio3] = 3;
 
     // Imprime as colunas
     for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
