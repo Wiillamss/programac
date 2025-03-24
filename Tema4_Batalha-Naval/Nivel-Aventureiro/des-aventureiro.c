@@ -16,7 +16,7 @@ int main()
     {
         for (int j = 0; j < TAMANHO_TABULEIRO; j++)
         {
-            tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO] = 0;
+            tabuleiro[i][j] = 0;
         }
     }
 
@@ -100,11 +100,11 @@ int main()
         {
             if (tabuleiro[i][j] == 3)
             {
-                printf(" N ");
+                printf(" 3 ");
             }
             else
             {
-                printf(" ~ ");
+                printf(" 0 ");
             }
         }
         printf("\n");
