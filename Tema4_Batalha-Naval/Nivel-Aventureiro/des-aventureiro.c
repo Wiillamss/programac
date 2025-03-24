@@ -100,11 +100,11 @@ int main()
         {
             if (tabuleiro[i][j] == TAMANHO_NAVIO)
             {
-                printf(" 3 ");
+                printf(" N ");
             }
             else
             {
-                printf(" 0 ");
+                printf(" ~ ");
             }
         }
         printf("\n");
