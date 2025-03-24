@@ -1,4 +1,3 @@
-/*
 #include <stdio.h>
 int main()
 {
@@ -21,7 +20,7 @@ int main()
            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
 
-       // Posicionando o navio no tabuleiro na vertical
+       // Posicionando o primeiro navio na vertical
        int navio1[3] = {4, 5, 6};
        for (int i = 0; i < 3; i++)
        {
@@ -30,7 +29,7 @@ int main()
               tabuleiro[linha1][coluna1] = 3;
        }
 
-       // Posicionando o navio no tabuleiro na horizontal
+       // Posicionando o segundo navio na horizontal
        int navio2[3] = {0, 1, 2};
        for (int i = 0; i < 3; i++)
        {
@@ -56,58 +55,4 @@ int main()
        }
 
        return 0;
-}
-*/
-
-#include <stdio.h>
-
-#define TAMANHO_TABULEIRO 10
-
-int main() {
-    char colunas[TAMANHO_TABULEIRO] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-    int linhas[TAMANHO_TABULEIRO] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO];
-
-    // Inicializa o tabuleiro com 0 (vazio)
-    for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
-        for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
-            tabuleiro[i][j] = 0;
-        }
-    }
-
-    // Define as coordenadas do navio
-    int linha_navio = 5; // Linha onde o navio será posicionado
-    int coluna_navio = 3; // Coluna onde o navio será posicionado
-
-    // Atribui o navio ao tabuleiro (valor 3)
-    tabuleiro[linha_navio][coluna_navio] = 3; // Posiciona o navio no tabuleiro
-    /////////////////////////////////////////////////////////////////////////////
-    int linha_navio2 = 5;
-    int coluna_navio2 = 4;
-    tabuleiro[linha_navio2][coluna_navio2] = 3;
-
-    int linha_navio3 = 5;
-    int coluna_navio3 = 5;
-    tabuleiro[linha_navio3][coluna_navio3] = 3;
-
-    // Imprime as colunas
-    for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
-        printf("  %c", colunas[j]);
-    }
-    printf("\n");
-
-    // Imprime o tabuleiro com o navio
-    for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
-        printf("%2d", linhas[i]);
-        for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
-            if (tabuleiro[i][j] == 3) {
-                printf(" N "); // Exibe 'N' se a célula contém o navio
-            } else {
-                printf(" 0 "); // Exibe '0' se a célula está vazia
-            }
-        }
-        printf("\n");
-    }
-
-    return 0;
 }
