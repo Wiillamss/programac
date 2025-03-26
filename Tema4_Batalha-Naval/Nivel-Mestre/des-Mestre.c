@@ -1,22 +1,40 @@
 #include <stdio.h>
 
 #define TABULEIRO 10
+#define NAVIO 3
 
 int main()
 {
 
-    char colunas[TABULEIRO] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-    int linhas[TABULEIRO] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int tabuleiro[TABULEIRO][TABULEIRO] = {0};
-    int cruz[TABULEIRO][TABULEIRO];
-    int octaedro[TABULEIRO][TABULEIRO];
-    int cone[TABULEIRO][TABULEIRO];
-    int navio_vertical[TABULEIRO][TABULEIRO];
-    int navio_horizontal[TABULEIRO][TABULEIRO];
-    int navio_diagonal_1[TABULEIRO][TABULEIRO];
-    int navio_diagonal_2[TABULEIRO][TABULEIRO];
-
-    // Posicionando a Cruz
+       char colunas[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+       int linhas[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+       int tabuleiro[TABULEIRO][TABULEIRO] = {0};
+       int cruz[TABULEIRO][TABULEIRO] = {0};
+       int octaedro[TABULEIRO][TABULEIRO] = {0};
+       int cone[TABULEIRO][TABULEIRO] = {0};
+       
+       // Posicionando o navio na horizontal 
+           int linha_h = 3, coluna_h = 2;
+           for (int i = 0; i < 3; i++){
+               tabuleiro[linha_h][coluna_h+i] = NAVIO;
+               }
+       // Posicionando o navio na Vertical
+           int linha_v = 5, coluna_v = 4;
+           for (int i = 0; i < 3; i++) {
+               tabuleiro[linha_v+i][coluna_v] = NAVIO;
+               }   
+       // Posicionando o primeiro navio na Diagonal 
+           int linha_d = 3, coluna_d = 0;
+           for(int i = 0; i < 3; i++) {
+           tabuleiro[linha_d-i][coluna_d+i] = NAVIO;
+           }     
+       // Posicionando o segundo navio na Diagonal
+           int linha_sd = 0, coluna_sd = 6;
+           for(int i = 0; i < 3; i++) {
+           tabuleiro[linha_sd+i][coluna_sd+i] = NAVIO;
+           }     
+           
+       //Posicionando a Cruz
     for (int i = 0; i < TABULEIRO; i++)
     {
         for (int j = 0; j < TABULEIRO; j++)
@@ -72,90 +90,21 @@ int main()
                 cone[i][j] = 0;
             }
         }
-    }
-
-    // Posicionando o Navio na Vertical
-    for (int i = 0; i < TABULEIRO; i++)
-    {
-        for (int j = 0; j < TABULEIRO; j++)
-        {
-            if ((i == 5 && j == 4) || (i == 6 && j == 4) ||
-                (i == 7 && j == 4))
-            {
-                navio_vertical[i][j] = 3;
-            }
-            else
-            {
-                navio_vertical[i][j] = 0;
-            }
-        }
-    }
-
-    // Posicionando o Navio na Horinzontal
-    for (int i = 0; i < TABULEIRO; i++)
-    {
-        for (int j = 0; j < TABULEIRO; j++)
-        {
-            if ((i == 3 && j == 0) || (i == 3 && j == 1) ||
-                (i == 3 && j == 2))
-            {
-                navio_horizontal[i][j] = 3;
-            }
-            else
-            {
-                navio_horizontal[i][j] = 0;
-            }
-        }
-    }
-
-    // Posicionando o Navio na Diagonal
-    for (int i = 0; i < TABULEIRO; i++)
-    {
-        for (int j = 0; j < TABULEIRO; j++)
-        {
-            if ((i == 5 && j == 7) || (i == 6 && j == 8) ||
-                (i == 7 && j == 9))
-            {
-                navio_diagonal_1[i][j] = 3;
-            }
-            else
-            {
-                navio_diagonal_1[i][j] = 0;
-            }
-        }
-    }
-
-    // Posicionando o Navio na Diagonal
-    for (int i = 0; i < TABULEIRO; i++)
-    {
-        for (int j = 0; j < TABULEIRO; j++)
-        {
-            if ((i == 0 && j == 4) || (i == 1 && j == 3) ||
-                (i == 2 && j == 2))
-            {
-                navio_diagonal_2[i][j] = 3;
-            }
-            else
-            {
-                navio_diagonal_2[i][j] = 0;
-            }
-        }
-    }
-
-    printf("*** Tabuleiro Batalha Naval ***\n");
-    printf("\n");
-    printf("  ");
-    for (int j = 0; j < TABULEIRO; j++)
-    {
-        printf(" %c", colunas[j]);
-    }
-    printf("\n");
-    for (int i = 0; i < TABULEIRO; i++)
-    {
-        printf("%2d", linhas[i]);
-        for (int j = 0; j < 10; j++)
-        {
-            if (cruz[i][j] == 1)
+    }           
+       printf ("*** Tabuleiro Batalha Naval ***\n");
+       printf ("\n");       
+      printf ("  ");
+       for (int j = 0; j < TABULEIRO; j++)
+       {
+              printf(" %c", colunas[j]);
+       }
+       printf("\n");
+       for (int i = 0; i < TABULEIRO; i++)
+       {
+              printf("%2d", linhas[i]);
+              for (int j = 0; j < TABULEIRO; j++)
+              {
+                     if (cruz[i][j] == 1)
             {
                 printf(" %d", cruz[i][j]); // Exibindo a Cruz no Tabuleiro
             }
@@ -166,22 +115,6 @@ int main()
             else if (cone[i][j] == 5)
             {
                 printf(" %d", cone[i][j]); // Exibindo o Cone no Tabuleiro
-            }
-            else if (navio_vertical[i][j] == 3)
-            {
-                printf(" %d", navio_vertical[i][j]); // Exibindo o Navio no Tabuleiro na Vertical
-            }
-            else if (navio_horizontal[i][j] == 3)
-            {
-                printf(" %d", navio_horizontal[i][j]); // Exibindo o Navio no Tabuleiro na Horizontal
-            }
-            else if (navio_diagonal_1[i][j] == 3)
-            {
-                printf(" %d", navio_diagonal_1[i][j]); // Exibindo o Navio no Tabuleiro na Diagonal
-            }
-            else if (navio_diagonal_2[i][j] == 3)
-            {
-                printf(" %d", navio_diagonal_2[i][j]); // Exibindo o Navio no Tabuleiro na Diagonal
             }
             else
             {
